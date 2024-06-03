@@ -1,0 +1,594 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+}
+
+/* Navigation Bar */
+.container-fluid{
+  background-color: #7600bc;
+  padding: 1% 5% 1% 7%;
+}
+
+.navbar-brand{
+  font-family: 'Sacramento', cursive;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.nav-item{
+  padding: 0 18px;
+  font-size: 1.2rem;
+  font-family: 'Montserrat';
+}
+
+.nav-item:hover{
+    color: white;
+    font-weight: bolder;
+}
+
+
+
+/* Titles */
+
+h2 {
+  text-align: justify;
+  font-size: 50px;
+  text-align: center;
+  float: left;
+  color: #7600bc;
+  margin: 30px;
+  margin-left: 7%;
+  margin-top: 60px;
+  margin-bottom: 1%;
+}
+
+
+
+/* Used in the Home sections */
+
+.container {
+  display: flex;
+}
+
+/* Home */
+
+.home {
+  display: flex;
+  align-items: center;
+}
+
+#home h1 {
+  text-align: left;
+  font-size: 90px;
+  margin-top: 90px;
+  color: #7600bc;
+  margin-left: 60px;
+}
+
+#home p {
+  text-align: left;
+  font-size: 30px;
+  color: rgb(128, 128, 128);
+  margin: 20px 10px 40px 65px;
+}
+
+.profile_image {
+  border-radius: 50%;
+  width: 310px;
+  height: 310px;
+  vertical-align: middle;
+  margin: 35% 10% 10% 5%;
+}
+
+.bi:hover{
+  color: #c5b3ce;
+}
+
+
+/* Skills */
+
+.all_skills {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  margin-left: 3%;
+
+}
+
+button {
+  position: relative;
+  width: 11em;
+  height: 4em;
+  outline: none;
+  transition: 0.1s;
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ddebf0;
+}
+
+#clip {
+  --color: #2761c3;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 5px double var(--color);
+  box-shadow: inset 0px 0px 15px #195480;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.arrow {
+  position: absolute;
+  transition: 0.2s;
+  background-color: #7600bc;
+  top: 35%;
+  width: 11%;
+  height: 30%;
+}
+
+#leftArrow {
+  left: -13.5%;
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+#rightArrow {
+  left: 102%;
+  clip-path: polygon(100% 49%, 0 0, 0 100%);
+}
+
+
+button:hover #rightArrow {
+  background-color: #27c39f;
+  left: -15%;
+  animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+}
+
+button:hover #leftArrow {
+  background-color: #27c39f;
+  left: 103%;
+  animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+}
+
+.corner {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  background-color: #7600bc;
+  box-shadow: inset 1px 1px 8px #7600bc;
+  transform: scale(1) rotate(45deg);
+  transition: 0.2s;
+}
+
+#rightTop {
+  top: -1.98em;
+  left: 91%;
+}
+
+#leftTop {
+  top: -1.96em;
+  left: -3.0em;
+}
+
+#leftBottom {
+  top: 2.10em;
+  left: -2.15em;
+}
+
+#rightBottom {
+  top: 45%;
+  left: 88%;
+}
+
+button:hover #leftTop {
+  animation: 0.1s ease-in-out 0.05s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover #rightTop {
+  animation: 0.1s ease-in-out 0.15s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover #rightBottom {
+  animation: 0.1s ease-in-out 0.25s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover #leftBottom {
+  animation: 0.1s ease-in-out 0.35s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover .corner {
+  transform: scale(1.25) rotate(45deg);
+}
+
+button:hover #clip {
+  animation: 0.2s ease-in-out 0.55s both greenLight8;
+  --color: #27c39f;
+}
+
+@keyframes changeColor8 {
+  from {
+    background-color: #2781c3;
+  }
+
+  to {
+    background-color: #27c39f;
+  }
+}
+
+@keyframes lightEffect8 {
+  from {
+    box-shadow: 1px 1px 5px #27c39f;
+  }
+
+  to {
+    box-shadow: 0 0 2px #27c39f;
+  }
+}
+
+@keyframes greenLight8 {
+  from {
+  }
+
+  to {
+    box-shadow: inset 0px 0px 32px #27c39f;
+  }
+}
+
+@keyframes leftArrow8 {
+  from {
+    transform: translate(0px);
+  }
+
+  to {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes rightArrow8 {
+  from {
+    transform: translate(0px);
+  }
+
+  to {
+    transform: translateX(-10px);
+  }
+}
+
+
+
+.skill:hover {
+  box-shadow: 0 0 0.5rem rgba(0,0,0,.6);
+  background-color: rgb(255, 255, 255)
+}
+.skill img:hover {
+  background-color: black;
+}
+
+.skill {
+  background: #10100fe6;
+  border: 1px solid gray;
+  border-radius: 50%;
+  margin: 15px 55px 10px;
+  width: 1.3in;
+  height: 1.3in;
+  box-shadow: 0 3px 10px gray;
+}
+
+.skill img {
+  border-radius: 50%;
+  height: 70%;
+  width: 70%;
+  margin: 15%;
+}
+
+
+/* Projects */
+
+.row{
+  margin-top: 3%;
+  margin-left: 6%;
+  margin-right: 6%;
+
+}
+
+.item{
+  margin-bottom: 20px;
+}
+
+.card-header{
+  padding: 5%;
+}
+
+.snap{
+  width: 100%;
+  height: 150px;
+}
+.btns{
+  display: flex;
+  justify-content: space-between;
+  margin-top: -5px;
+  margin-bottom: -20px;
+}
+
+.btns img{
+  margin-left: -80%;
+  padding: 4%;
+}
+
+.demo{
+  margin-right: -25px;
+}
+
+
+
+.btn{
+  margin-top: 1%;
+  margin-bottom: 2%;
+  color: #7600bc;
+}
+
+.btn:hover{
+  background-color: #7600bc;
+  color: white;
+}
+
+
+/* Contact */
+
+
+.contact-me{
+  margin: 50px auto 60px;
+  width: 40%;
+  text-align: center;
+  padding: 70px;
+}
+
+
+.contact-me h2, h3{
+  text-align: center;
+  margin: 25px;
+  float: none;
+}
+
+.contact-me button{
+  margin-top: 25px;
+}
+
+
+.bottom-container{
+  background-color: #7600bc;
+  color: #eaf6f6;
+  padding-top: 40px;
+  margin-top: 5%;
+}
+
+
+.footer-link{
+  color: #060007;
+  margin: 10px 5px 5px 60px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.copyright{
+  color: #090112;
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: -20px;
+
+}
+
+/* Scroll to Top Button */
+
+.iconbutton{
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: #7600bc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  cursor: pointer;
+}
+/* Custom styles for the skill detail modal */
+#skillDetailModal .modal-content {
+  background: linear-gradient(135deg, #f6f8f9, #e1e5ea);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: popUp 0.4s ease-out;
+}
+
+#skillDetailModal .modal-header {
+  border-bottom: none;
+  justify-content: center;
+}
+
+#skillDetailModal .modal-title {
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+#skillDetailModal .modal-body {
+  color: #666;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#skillDetailModal .btn-secondary {
+  background-color: #fff5f5;
+  border: none;
+  border-radius: 5px;
+}
+
+#skillDetailModal .btn-secondary:hover {
+  background-color: #555;
+}
+
+#skillDetailModal .modal-footer {
+  border-top: none;
+  justify-content: center;
+}
+
+/* Pop-up animation */
+@keyframes popUp {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Button animation */
+.btn-pop {
+  transition: all 0.3s ease;
+}
+
+.btn-pop:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(122, 117, 117, 0.184);
+}
+/* Centering buttons */
+.center-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px; /* Adjust margin as needed */
+}
+
+/* Updated button styles for centering */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  position: relative;
+  padding: 0 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 0;
+  box-shadow: #7600bc 0px 7px 0px 0px;
+  background-color: #7600bc;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 31ms cubic-bezier(.5, .7, .4, 1);
+}
+
+button:before {
+  content: attr(alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+  opacity: 1;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(7px);
+  transition: 35ms cubic-bezier(.5, .7, .4, 1);
+}
+
+button:hover:before {
+  transition: all .0s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+button i {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-style: normal;
+  transition: all 2s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+button:hover i {
+  transition: all .2s ease;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+button:hover i:nth-child(1) {
+  transition-delay: 0.045s;
+}
+
+button:hover i:nth-child(2) {
+  transition-delay: calc(0.045s * 3);
+}
+
+button:hover i:nth-child(3) {
+  transition-delay: calc(0.045s * 4);
+}
+
+button:hover i:nth-child(4) {
+  transition-delay: calc(0.045s * 5);
+}
+
+button:hover i:nth-child(5) {
+  transition-delay: calc(0.045s * 6);
+}
+
+button:hover i:nth-child(6) {
+  transition-delay: calc(0.045s * 7);
+}
+
+button:hover i:nth-child(7) {
+  transition-delay: calc(0.045s * 8);
+}
+
+button:hover i:nth-child(8) {
+  transition-delay: calc(0.045s * 9);
+}
+
+button:hover i:nth-child(9) {
+  transition-delay: calc(0.045s * 10);
+}
+
+button:hover i:nth-child(10) {
+  transition-delay: calc(0.045s * 11);
+}
+button:hover i:nth-child(11) {
+  transition-delay: calc(0.045s * 12);
+}
+.video-container {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.video-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.video-overlay video {
+  max-width: 100%;
+  max-height: 100%;
+}
