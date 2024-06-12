@@ -1,6 +1,8 @@
 # Harsh Dev Portfolio
 
 Welcome to my portfolio website! This is a showcase of my projects, skills, and contact information. Feel free to explore and get in touch with me.
+## Live Website
+Check out the live version of my portfolio [here](https://harshdev04.github.io/project-portfolio/
 
 ## Table of Contents
 - [About Me](#about-me)
